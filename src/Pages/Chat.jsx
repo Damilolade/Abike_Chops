@@ -493,9 +493,7 @@ const Chat = () => {
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg shadow-xl max-w-sm w-full p-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-bold text-gray-900">
-                Start New Chat
-              </h2>
+              <h2 className="text-xl font-bold text-black">Start New Chat</h2>
               <button
                 onClick={() => setShowNewChat(false)}
                 className="text-gray-600 hover:text-gray-900"
@@ -512,14 +510,14 @@ const Chat = () => {
               onKeyPress={(e) => {
                 if (e.key === "Enter") handleCreateNewChat();
               }}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-6"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-6 text-gray-900"
               autoFocus
             />
 
             <div className="flex gap-3">
               <button
                 onClick={() => setShowNewChat(false)}
-                className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition"
+                className="flex-1 px-4 py-2 border border-gray-300 text-black font-semibold rounded-lg hover:bg-gray-50 transition"
               >
                 Cancel
               </button>
