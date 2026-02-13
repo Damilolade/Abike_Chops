@@ -1,0 +1,48 @@
+/* index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 1rem;
+}
+
+@keyframes wobble {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(-5px); }
+  30% { transform: translateX(5px); }
+  45% { transform: translateX(-5px); }
+  60% { transform: translateX(5px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+.animate-wobble {
+  animation: wobble 0.6s ease-in-out;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 0px rgba(59,130,246,0.5); }
+  50% { box-shadow: 0 0 12px rgba(59,130,246,0.8); }
+  100% { box-shadow: 0 0 0px rgba(59,130,246,0.5); }
+}
+
+.animate-glow {
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+/* Make all page text bold while any element is focused (user typing) */
+html:focus-within,
+body:focus-within {
+  font-weight: 700;
+}
+
+/* Minimal base resets to improve consistency */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+}

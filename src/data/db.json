@@ -1,0 +1,20 @@
+{
+  "orders": [
+    {
+      "id": "1",
+      "customer": "Oyindamola",
+      "items": ["Puff Puff"],
+      "quantity": 20,
+      "status": "pending",
+      "createdAt": "2025-12-22T03:00:00Z"
+    },
+    {
+      "id": "2",
+      "customer": "Damilola",
+      "items": ["Springroll", "Samosa", "Puff Puff", "Gizzard", "Chicken"],
+      "quantity": 5,
+      "status": "pending",
+      "createdAt": "2025-12-22T03:10:00Z"
+    }
+  ]
+}
