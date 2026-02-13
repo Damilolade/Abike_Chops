@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Abike_Chops/',   
+  base: './',   // ✅ relative paths for JS/CSS/images
 })
