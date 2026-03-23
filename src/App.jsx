@@ -28,6 +28,7 @@ import Contact from "./Pages/Contact";
 import Wallet from "./Pages/Wallet";
 import Cart from "./Pages/Cart";
 import Chat from "./Pages/Chat";
+import NotFound from "./Pages/NotFound";
 
 /* =======================
    Training Pages
@@ -63,6 +64,7 @@ import UserManagementDashboard from "./dashboards/UserManagementDashboard";
 ======================= */
 import ProtectedTrainingRoute from "./components/ProtectedTrainingRoute";
 import ProtectedAdminRoute from "./components/ProtectedAdminRoute";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 /* =======================
    Router
@@ -164,7 +166,7 @@ const router = createBrowserRouter(
       {/* =======================
           Fallback
       ======================= */}
-      <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="*" element={<NotFound />} />
     </Route>,
   ),
 );
@@ -175,7 +177,9 @@ const router = createBrowserRouter(
 export default function App() {
   return (
     <AuthProvider>
-      <RouterProvider router={router} />
+      <ErrorBoundary>
+        <RouterProvider router={router} />
+      </ErrorBoundary>
     </AuthProvider>
   );
 }

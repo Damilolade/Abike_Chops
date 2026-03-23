@@ -83,7 +83,7 @@ const Sidebar = ({ isOpen = true, onClose = () => {}, orders = [] }) => {
 
       <div
         className={`relative z-10 flex flex-col h-full p-4 space-y-3 transition-colors duration-500 ${
-          darkMode ? "text-gray-100" : "text-white"
+            darkMode ? "text-gray-100" : "text-white"
         }`}
       >
         {isOpen && (
